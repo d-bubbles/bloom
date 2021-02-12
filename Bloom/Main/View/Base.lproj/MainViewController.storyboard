@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="MainViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PqO-my-jiE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F1K-YY-Jxn">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="habitsHeader" id="HfJ-X6-pSs" customClass="HeaderCollectionView" customModule="Bloom" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Habits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-2j-Dim">
+                                            <rect key="frame" x="30" y="4.5" width="143" height="41"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                            <color key="textColor" red="0.0" green="0.30196078431372547" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DrH-LI-WNz">
+                                            <rect key="frame" x="344" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" red="0.027450980392156862" green="0.73333333333333328" blue="0.61176470588235299" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Gq3-se-fet"/>
+                                                <constraint firstAttribute="width" constant="50" id="Mek-LC-r1Y"/>
+                                            </constraints>
+                                            <state key="normal" image="addButton"/>
+                                            <connections>
+                                                <action selector="onAddButtonDidPress:" destination="HfJ-X6-pSs" eventType="touchUpInside" id="P3B-xp-tL1"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHabits" translatesAutoresizingMaskIntoConstraints="NO" id="eyK-D0-Otr">
+                                            <rect key="frame" x="183" y="-5.5" width="26" height="51"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="1HI-Hu-mq9"/>
+                                                <constraint firstAttribute="width" constant="26" id="czT-Fo-A9j"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DrH-LI-WNz" firstAttribute="centerY" secondItem="HfJ-X6-pSs" secondAttribute="centerY" id="1mD-zZ-Lwo"/>
+                                        <constraint firstItem="vg3-2j-Dim" firstAttribute="leading" secondItem="HfJ-X6-pSs" secondAttribute="leading" constant="30" id="Apa-7e-NK0"/>
+                                        <constraint firstAttribute="trailing" secondItem="DrH-LI-WNz" secondAttribute="trailing" constant="20" id="BLf-DA-7RM"/>
+                                        <constraint firstItem="eyK-D0-Otr" firstAttribute="bottom" secondItem="vg3-2j-Dim" secondAttribute="bottom" id="RzI-9G-zCW"/>
+                                        <constraint firstItem="vg3-2j-Dim" firstAttribute="centerY" secondItem="HfJ-X6-pSs" secondAttribute="centerY" id="Uwn-fr-x05"/>
+                                        <constraint firstItem="eyK-D0-Otr" firstAttribute="leading" secondItem="vg3-2j-Dim" secondAttribute="trailing" constant="10" id="qQz-6J-CA4"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="addButton" destination="DrH-LI-WNz" id="19P-l8-bPd"/>
+                                        <outlet property="title" destination="vg3-2j-Dim" id="g7x-us-9G5"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PqO-my-jiE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9jy-ir-nXB"/>
+                            <constraint firstItem="PqO-my-jiE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bBd-Ch-IAK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PqO-my-jiE" secondAttribute="trailing" id="rqV-uc-KwT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PqO-my-jiE" secondAttribute="bottom" id="w9E-Oj-G3H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UTW-rI-A6B"/>
+                    <connections>
+                        <outlet property="collectionView" destination="PqO-my-jiE" id="8eg-Rr-3eg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addButton" width="27" height="27"/>
+        <image name="emptyHabits" width="73" height="176"/>
+    </resources>
+</document>
